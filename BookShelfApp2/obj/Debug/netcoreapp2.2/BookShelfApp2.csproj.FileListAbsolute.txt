@@ -35,3 +35,13 @@ C:\Users\Dek\workspace\c32\BookShelfApp2\BookShelfApp2\obj\Debug\netcoreapp2.2\B
 C:\Users\Dek\workspace\c32\BookShelfApp2\BookShelfApp2\obj\Debug\netcoreapp2.2\BookShelfApp2.pdb
 C:\Users\Dek\workspace\c32\BookShelfApp2\BookShelfApp2\obj\Debug\netcoreapp2.2\BookShelfApp2.csproj.CopyComplete
 C:\Users\Dek\workspace\c32\BookShelfApp2\BookShelfApp2\obj\Debug\netcoreapp2.2\BookShelfApp2.csprojAssemblyReference.cache
+C:\Users\Dek\workspace\c32\BookShelfApp2\BookShelfApp2\obj\Debug\netcoreapp2.2\Razor\Views\Books\Create.g.cshtml.cs
+C:\Users\Dek\workspace\c32\BookShelfApp2\BookShelfApp2\obj\Debug\netcoreapp2.2\Razor\Views\Books\Delete.g.cshtml.cs
+C:\Users\Dek\workspace\c32\BookShelfApp2\BookShelfApp2\obj\Debug\netcoreapp2.2\Razor\Views\Books\Details.g.cshtml.cs
+C:\Users\Dek\workspace\c32\BookShelfApp2\BookShelfApp2\obj\Debug\netcoreapp2.2\Razor\Views\Books\Edit.g.cshtml.cs
+C:\Users\Dek\workspace\c32\BookShelfApp2\BookShelfApp2\obj\Debug\netcoreapp2.2\Razor\Views\Books\Index.g.cshtml.cs
+C:\Users\Dek\workspace\c32\BookShelfApp2\BookShelfApp2\obj\Debug\netcoreapp2.2\Razor\Views\Authors\Create.g.cshtml.cs
+C:\Users\Dek\workspace\c32\BookShelfApp2\BookShelfApp2\obj\Debug\netcoreapp2.2\Razor\Views\Authors\Delete.g.cshtml.cs
+C:\Users\Dek\workspace\c32\BookShelfApp2\BookShelfApp2\obj\Debug\netcoreapp2.2\Razor\Views\Authors\Details.g.cshtml.cs
+C:\Users\Dek\workspace\c32\BookShelfApp2\BookShelfApp2\obj\Debug\netcoreapp2.2\Razor\Views\Authors\Edit.g.cshtml.cs
+C:\Users\Dek\workspace\c32\BookShelfApp2\BookShelfApp2\obj\Debug\netcoreapp2.2\Razor\Views\Authors\Index.g.cshtml.cs

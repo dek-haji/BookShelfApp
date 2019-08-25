@@ -11,8 +11,7 @@ using BookShelfApp2.Data;
 namespace BookShelfApp2.Controllers
 {
     public class HomeController : Controller
-    {
-        private readonly UserManager<ApplicationUser> _userManager;
+    { private readonly UserManager<ApplicationUser> _userManager;
         private readonly ApplicationDbContext _context;
 
         public HomeController(ApplicationDbContext ctx,
