@@ -19,6 +19,12 @@ namespace BookShelfApp2.Models
         [Display(Name = "Last Name")]
         public string PrefferedGenre { get; set; }
         public virtual ICollection<Books> Books { get; set; }
-        public int AppUserId { get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
+        public int ApplicationUserId { get; set; }
+        [Display(Name = "Name")]
+        public string fullName
+        {
+            get { return $"{FirstName} {LastName}"; }
+        }
     }
 }

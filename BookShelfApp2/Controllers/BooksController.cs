@@ -22,7 +22,8 @@ namespace BookShelfApp2.Controllers
         // GET: Books
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Books.ToListAsync());
+            var applicationDbContext = _context.Books.Include(b => b.Author);
+            return View(await applicationDbContext.ToListAsync());
         }
 
         // GET: Books/Details/5
@@ -34,6 +35,7 @@ namespace BookShelfApp2.Controllers
             }
 
             var books = await _context.Books
+                .Include(b => b.Author)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (books == null)
             {
@@ -46,6 +48,7 @@ namespace BookShelfApp2.Controllers
         // GET: Books/Create
         public IActionResult Create()
         {
+            ViewData["AuthorId"] = new SelectList(_context.author, "Id", "FirstName");
             return View();
         }
 
@@ -54,7 +57,7 @@ namespace BookShelfApp2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ISBN,Title,Genre,PublishDate,AuthorId")] Books books)
+        public async Task<IActionResult> Create([Bind("Id,ISBN,Title,Genre,PublishDate,AuthorId,ApplicationUserId")] Books books)
         {
             if (ModelState.IsValid)
             {
@@ -62,6 +65,7 @@ namespace BookShelfApp2.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["AuthorId"] = new SelectList(_context.author, "Id", "FirstName", books.AuthorId);
             return View(books);
         }
 
@@ -78,6 +82,7 @@ namespace BookShelfApp2.Controllers
             {
                 return NotFound();
             }
+            ViewData["AuthorId"] = new SelectList(_context.author, "Id", "FirstName", books.AuthorId);
             return View(books);
         }
 
@@ -86,7 +91,7 @@ namespace BookShelfApp2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ISBN,Title,Genre,PublishDate,AuthorId")] Books books)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,ISBN,Title,Genre,PublishDate,AuthorId,ApplicationUserId")] Books books)
         {
             if (id != books.Id)
             {
@@ -113,6 +118,7 @@ namespace BookShelfApp2.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["AuthorId"] = new SelectList(_context.author, "Id", "FirstName", books.AuthorId);
             return View(books);
         }
 
@@ -125,6 +131,7 @@ namespace BookShelfApp2.Controllers
             }
 
             var books = await _context.Books
+                .Include(b => b.Author)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (books == null)
             {

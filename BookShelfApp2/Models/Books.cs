@@ -22,6 +22,11 @@ namespace BookShelfApp2.Models
         [Display(Name = "publish date")]
         public DateTime PublishDate { get; set; }
         public int AuthorId { get; set; }
-       
+        [Required]
+        [Display(Name = "User Creator Id")]
+        public int ApplicationUserId { get; set; }
+
+        public Author Author { get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
     }
 }

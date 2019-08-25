@@ -54,7 +54,7 @@ namespace BookShelfApp2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,PrefferedGenre,AppUserId")] Author author)
+        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,PrefferedGenre,ApplicationUserId")] Author author)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace BookShelfApp2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,PrefferedGenre,AppUserId")] Author author)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,PrefferedGenre,ApplicationUserId")] Author author)
         {
             if (id != author.Id)
             {

@@ -20,7 +20,8 @@ namespace BookShelfApp2.Models
         [Display(Name = "FullName")]
         public string FullName => $"{FirstName} {LastName}";
 
-        public virtual ICollection<Books> Books { get; set; }
+        public virtual ICollection<Books> BooksCreated { get; set; }
+        public virtual ICollection<Author> AuthorsCreated { get; set; }
 
 
     }
